@@ -22,7 +22,7 @@ public class BookService {
     }
     public void updateBook(Book book){
         Optional<Book> uBook=bookDao.findById(book.getBookId());
-        uBook.get().setBookIsbn(book.getBookIsbn());
+        uBook.get().setIsbn(book.getIsbn());
         uBook.get().setBookName(book.getBookName());
         uBook.get().setBookSubName(book.getBookSubName());
         uBook.get().setBookSeriesName(book.getBookSeriesName());

@@ -10,7 +10,7 @@ public class Book{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookId;
-    private String bookIsbn;
+    private String isbn;
     private String bookName;
     private String bookSubName;
     private String bookSeriesName;
@@ -27,9 +27,9 @@ public class Book{
     public Book() {
     }
 
-    public Book(Long bookId, String bookIsbn, String bookName, String bookSubName, String bookSeriesName, Author author, Publisher publisher, String bookDescription) {
+    public Book(Long bookId, String isbn, String bookName, String bookSubName, String bookSeriesName, Author author, Publisher publisher, String bookDescription) {
         this.bookId = bookId;
-        this.bookIsbn = bookIsbn;
+        this.isbn = isbn;
         this.bookName = bookName;
         this.bookSubName = bookSubName;
         this.bookSeriesName = bookSeriesName;
@@ -46,12 +46,12 @@ public class Book{
         this.bookId = bookId;
     }
 
-    public String getBookIsbn() {
-        return bookIsbn;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setBookIsbn(String ISBN) {
-        this.bookIsbn = bookIsbn;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getBookName() {
