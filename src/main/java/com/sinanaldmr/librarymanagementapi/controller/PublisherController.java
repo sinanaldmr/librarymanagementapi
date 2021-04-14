@@ -2,10 +2,7 @@ package com.sinanaldmr.librarymanagementapi.controller;
 
 import com.sinanaldmr.librarymanagementapi.Model.Publisher;
 import com.sinanaldmr.librarymanagementapi.Service.PublisherService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -30,6 +27,6 @@ public class PublisherController {
         publisherService.deletePublisher(id);
     }
 
-    @PostMapping(value = "getAll",produces = "application/json",consumes = "application/json")
+    @GetMapping(value = "getAll")
     public List<Publisher> getAll(){return publisherService.findPublishers(); }
 }

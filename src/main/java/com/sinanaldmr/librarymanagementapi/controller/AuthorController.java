@@ -2,10 +2,7 @@ package com.sinanaldmr.librarymanagementapi.controller;
 
 import com.sinanaldmr.librarymanagementapi.Model.Author;
 import com.sinanaldmr.librarymanagementapi.Service.AuthorService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -31,7 +28,7 @@ public class AuthorController {
         authorService.deleteAuthor(id);
     }
 
-    @PostMapping(value = "getAll",produces = "application/json",consumes = "application/json")
+    @GetMapping(value = "getAll")
     public List<Author> getAll(){
         return authorService.findAuthors();
     }

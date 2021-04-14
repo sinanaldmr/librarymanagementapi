@@ -15,11 +15,11 @@ public class Book{
     private String bookSubName;
     private String bookSeriesName;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH})
     @JoinColumn(name = "authorId", nullable = true)
     private Author author;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH})
     @JoinColumn(name = "publisherId",nullable = true)
     private Publisher publisher;
     private String bookDescription;
